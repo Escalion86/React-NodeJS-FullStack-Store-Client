@@ -12,7 +12,7 @@ const NavBar = observer(() => {
 
   const logOut = () => {
     user.setUser({})
-    user.isAuth(false)
+    user.setIsAuth(false)
   }
 
   return (

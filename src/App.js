@@ -5,11 +5,11 @@ import { Context } from './index'
 import AppRouter from './components/AppRouter'
 import NavBar from './components/NavBar'
 import { check } from './http/userAPI'
-import UserStore from './store/UserStore'
 import { Spinner } from 'react-bootstrap'
 
 const App = observer(() => {
   const { user } = useContext(Context)
+  console.log(`user`, user)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {

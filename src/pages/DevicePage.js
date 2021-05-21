@@ -1,14 +1,15 @@
-import React, { useState, useeffect, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Col, Container, Image, Row, Card } from 'react-bootstrap'
 import Star from '../components/Star'
 import { useParams } from 'react-router-dom'
-import { fetchOneDevices } from '../http/deviceAPI'
+import { fetchOneDevice } from '../http/deviceAPI'
 
 const DevicePage = () => {
   const [device, setDevice] = useState({ info: [] })
   const { id } = useParams()
-  useEffect(() => {}, [])
-  fetchOneDevices(id).then((data) => setDevice(data))
+  useEffect(() => {
+    fetchOneDevice(id).then((data) => setDevice(data))
+  }, [id])
   return (
     <Container className="mt-3">
       <Row>

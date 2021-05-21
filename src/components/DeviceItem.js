@@ -6,7 +6,6 @@ import Star from './Star'
 
 const DeviceItem = ({ device }) => {
   const history = useHistory()
-  console.log(history)
   return (
     <Col
       md={3}
